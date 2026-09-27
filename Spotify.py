@@ -60,3 +60,55 @@ SONGS = {
         ("Skinny Love", "Bon Iver"),
     ],
 }
+
+# =============================
+# QUESTIONS
+# Each option adds a point to one category
+# =============================
+QUESTIONS = [
+    {
+        "text": "How are you feeling right now?",
+        "options": {
+            "A": ("Relaxed and calm", "Chill/Lofi"),
+            "B": ("Happy and excited", "Pop/Upbeat"),
+            "C": ("Pumped up / hyped", "Hip-Hop/Energetic"),
+            "D": ("A bit down or emotional", "Sad/Heartbreak"),
+        },
+    },
+    {
+        "text": "What are you doing right now?",
+        "options": {
+            "A": ("Studying / working", "Chill/Lofi"),
+            "B": ("Hanging out with friends", "Pop/Upbeat"),
+            "C": ("Working out / gaming", "Hip-Hop/Energetic"),
+            "D": ("Just lying in bed thinking", "Sad/Heartbreak"),
+        },
+    },
+    {
+        "text": "Pick a vibe:",
+        "options": {
+            "A": ("Dreamy and mellow", "Chill/Lofi"),
+            "B": ("Catchy and fun", "Pop/Upbeat"),
+            "C": ("Loud and bold", "Rock/Alternative"),
+            "D": ("Heavy bass and rhythm", "Hip-Hop/Energetic"),
+        },
+    },
+    {
+        "text": "What's your ideal weather for this moment?",
+        "options": {
+            "A": ("Rainy day, cozy indoors", "Sad/Heartbreak"),
+            "B": ("Sunny day out", "Pop/Upbeat"),
+            "C": ("Doesn't matter, I'm in my zone", "Rock/Alternative"),
+            "D": ("Late night, city lights", "Hip-Hop/Energetic"),
+        },
+    },
+    {
+        "text": "Choose a word that describes you today:",
+        "options": {
+            "A": ("Peaceful", "Chill/Lofi"),
+            "B": ("Energetic", "Hip-Hop/Energetic"),
+            "C": ("Nostalgic", "Sad/Heartbreak"),
+            "D": ("Rebellious", "Rock/Alternative"),
+        },
+    },
+]
