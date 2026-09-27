@@ -18,3 +18,45 @@
 # *************************************************************************
 
 import random
+
+# =============================
+# SONG DATABASE
+# Each category has a list of (song, artist) tuples
+# =============================
+SONGS = {
+    "Chill/Lofi": [
+        ("Sunset Lover", "Petit Biscuit"),
+        ("Circles", "Post Malone"),
+        ("Breathe", "Ta-ku"),
+        ("Coffee", "Beabadoobee"),
+        ("Ocean Eyes", "Billie Eilish"),
+    ],
+    "Pop/Upbeat": [
+        ("Levitating", "Dua Lipa"),
+        ("Sunroof", "Nicky Youre"),
+        ("As It Was", "Harry Styles"),
+        ("Good 4 U", "Olivia Rodrigo"),
+        ("Blinding Lights", "The Weeknd"),
+    ],
+    "Hip-Hop/Energetic": [
+        ("HUMBLE.", "Kendrick Lamar"),
+        ("Sicko Mode", "Travis Scott"),
+        ("Money Trees", "Kendrick Lamar"),
+        ("God's Plan", "Drake"),
+        ("Industry Baby", "Lil Nas X"),
+    ],
+    "Rock/Alternative": [
+        ("Do I Wanna Know?", "Arctic Monkeys"),
+        ("Mr. Brightside", "The Killers"),
+        ("Take Me Out", "Franz Ferdinand"),
+        ("Somebody Told Me", "The Killers"),
+        ("Feel Good Inc.", "Gorillaz"),
+    ],
+    "Sad/Heartbreak": [
+        ("Someone Like You", "Adele"),
+        ("Say Something", "A Great Big World"),
+        ("Fix You", "Coldplay"),
+        ("Liability", "Lorde"),
+        ("Skinny Love", "Bon Iver"),
+    ],
+}
