@@ -1,7 +1,7 @@
 # *************************************************************************
 # Course: LDCW6123-FUNDAMENTALS OF DIGITAL COMP
 # Lecture Section: FCI 8
-# Trimester: 2620 
+# Trimester: 2620
 # Group 3
 # Names: MUHAMMAD ADAM HARRIS BIN AZHAR | IDs: 262UC254PA
 # Names: ADAM ASYRAF BIN ABDUL WAHID | IDs: 262UC253TK
@@ -12,15 +12,13 @@
 # *************************************************************************
 
 # *************************************************************************
-# SONG FINDER QUIZ
+# SPOTIFY LITE - SONG FINDER QUIZ
+# Inspired by Spotify's mood/vibe-based recommendation feature.
 # A simplified quiz that asks about your mood/taste and recommends songs.
 # Everything is hardcoded in this file - no external .txt files needed.
-# *************************************************************************
-
-# *************************************************************************
-# SONG FINDER QUIZ
-# A simplified quiz that asks about your mood/taste and recommends songs.
-# Everything is hardcoded in this file - no external .txt files needed.
+#
+# Inputs: mood, activity, vibe, weather and self-description answers (A-D)
+# Outputs: a suggested music category + 3 recommended songs
 # *************************************************************************
 
 import random
@@ -163,7 +161,19 @@ def find_my_song():
     print("=" * 50)
 
 
+def show_welcome():
+    print("=" * 50)
+    print("🎧 WELCOME TO SPOTIFY LITE 🎧")
+    print("=" * 50)
+    print("Not sure what to listen to? Answer a few quick")
+    print("questions about your mood and we'll match you")
+    print("with songs that fit your vibe right now.")
+    print("=" * 50)
+
+
 def main():
+    show_welcome()
+
     while True:
         print("\n" + "=" * 50)
         print("🎮 MAIN MENU 🎮")
