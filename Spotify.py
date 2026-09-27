@@ -112,3 +112,25 @@ QUESTIONS = [
         },
     },
 ]
+
+def find_my_song():
+    print("\n" + "=" * 50)
+    print("🎵 SONG FINDER QUIZ 🎵")
+    print("Answer a few questions and we'll find your song!")
+    print("=" * 50)
+
+    scores = {category: 0 for category in SONGS}
+
+    for idx, q in enumerate(QUESTIONS, start=1):
+        print(f"\nQuestion {idx}/{len(QUESTIONS)}")
+        print("-" * 50)
+        print(q["text"])
+
+        for letter, (option_text, _) in q["options"].items():
+            print(f"{letter}. {option_text}")
+
+        ans = input("Your answer (A/B/C/D): ").upper().strip()
+
+        if ans in q["options"]:
+            _, category = q["options"][ans]
+            scores[category] += 1
