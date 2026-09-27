@@ -17,6 +17,12 @@
 # Everything is hardcoded in this file - no external .txt files needed.
 # *************************************************************************
 
+# *************************************************************************
+# SONG FINDER QUIZ
+# A simplified quiz that asks about your mood/taste and recommends songs.
+# Everything is hardcoded in this file - no external .txt files needed.
+# *************************************************************************
+
 import random
 
 # =============================
@@ -113,6 +119,7 @@ QUESTIONS = [
     },
 ]
 
+
 def find_my_song():
     print("\n" + "=" * 50)
     print("🎵 SONG FINDER QUIZ 🎵")
@@ -129,11 +136,14 @@ def find_my_song():
         for letter, (option_text, _) in q["options"].items():
             print(f"{letter}. {option_text}")
 
-        ans = input("Your answer (A/B/C/D): ").upper().strip()
+        while True:
+            ans = input("Your answer (A/B/C/D): ").upper().strip()
+            if ans in q["options"]:
+                break
+            print("❌ Please choose A, B, C, or D.")
 
-        if ans in q["options"]:
-            _, category = q["options"][ans]
-            scores[category] += 1
+        _, category = q["options"][ans]
+        scores[category] += 1
 
     # Find category with highest score
     top_category = max(scores, key=scores.get)
@@ -145,14 +155,33 @@ def find_my_song():
     print("-" * 50)
 
     # Recommend 3 random songs from that category
-    picks = random.sample(
-        SONGS[top_category],
-        min(3, len(SONGS[top_category]))
-    )
-
+    picks = random.sample(SONGS[top_category], min(3, len(SONGS[top_category])))
     print("Here are some songs you might like:\n")
-
     for song, artist in picks:
         print(f"  🎶 {song} — {artist}")
 
     print("=" * 50)
+
+
+def main():
+    while True:
+        print("\n" + "=" * 50)
+        print("🎮 MAIN MENU 🎮")
+        print("=" * 50)
+        print("""
+1. Find My Song
+2. Exit
+""")
+        choice = input("Choice: ").strip()
+
+        if choice == "1":
+            find_my_song()
+        elif choice == "2":
+            print("👋 Goodbye!")
+            break
+        else:
+            print("❌ Invalid choice.")
+
+
+if __name__ == "__main__":
+    main()
