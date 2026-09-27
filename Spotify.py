@@ -134,3 +134,25 @@ def find_my_song():
         if ans in q["options"]:
             _, category = q["options"][ans]
             scores[category] += 1
+
+    # Find category with highest score
+    top_category = max(scores, key=scores.get)
+
+    print("\n" + "=" * 50)
+    print("🎧 YOUR RESULT 🎧")
+    print("=" * 50)
+    print(f"Your vibe today: {top_category}")
+    print("-" * 50)
+
+    # Recommend 3 random songs from that category
+    picks = random.sample(
+        SONGS[top_category],
+        min(3, len(SONGS[top_category]))
+    )
+
+    print("Here are some songs you might like:\n")
+
+    for song, artist in picks:
+        print(f"  🎶 {song} — {artist}")
+
+    print("=" * 50)
