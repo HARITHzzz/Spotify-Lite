@@ -17,6 +17,7 @@
 # A simplified quiz that asks about your mood/taste and recommends songs.
 # Everything is hardcoded in this file - no external .txt files needed.
 #
+#
 # Inputs: mood, activity, vibe, weather and self-description answers (A-D)
 # Outputs: a suggested music category + 3 recommended songs
 # *************************************************************************
